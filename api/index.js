@@ -9,9 +9,6 @@ const app = express();
 
 app.use(express.json());
 
-//configuring error middleware
-app.use(error);
-
 //connecting to DB
 mongoose
   .connect(process.env.MONGO)
@@ -28,3 +25,6 @@ app.listen(3000, () => {
 });
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
+
+//configuring error middleware
+app.use(error);

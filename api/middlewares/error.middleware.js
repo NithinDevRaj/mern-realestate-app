@@ -1,4 +1,4 @@
-const error = async (err, req, res, next) => {
+const error = (err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   const message = err.message || "Internal Server Error";
 
@@ -9,4 +9,4 @@ const error = async (err, req, res, next) => {
   });
 };
 
-export default error
+export default error;
