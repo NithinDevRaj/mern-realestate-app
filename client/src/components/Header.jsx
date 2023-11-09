@@ -4,12 +4,12 @@ import { useSelector } from "react-redux";
 const Header = () => {
   const { currentUser } = useSelector((state) => state.user);
   return (
-    <header className="bg-lime-200 shadow-md">
+    <header className="bg-lime-100 shadow-md">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to="/">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap ">
-            <span className="text-lime-500">Real</span>
-            <span className="text-lime-700">Estate</span>
+            <span className="text-lime-700">Estate </span>
+            <span className="text-lime-500">Nexus</span>
           </h1>
         </Link>
 
