@@ -73,7 +73,7 @@ export default function CreateListing() {
     } else {
       setImageUploadError('You can only upload 6 images per listing');
       setUploading(false);
-    }
+    } 
   };
 
   const storeImage = async (file) => {

@@ -1,13 +1,14 @@
 import errorHandler from "../utils/error.handler.js";
 import bcryptjs from "bcryptjs";
 import User from "../models/user.model.js";
+import Listing from "../models/listing.model.js";
 const test = (req, res) => {
   res.json({
     message: "heollo",
   });
 };
 const updateUserInfo = async (req, res, next) => {
-  console.log(req.body);
+  
   if (req.user.id !== req.params.id)
     return next(errorHandler(401, "You can only update your own account!"));
   try {
@@ -29,7 +30,7 @@ const updateUserInfo = async (req, res, next) => {
     );
 
     const { password, ...rest } = updatedUser._doc;
-    console.log(rest);
+    // console.log(rest);
 
     res.status(200).json(rest);
   } catch (error) {
