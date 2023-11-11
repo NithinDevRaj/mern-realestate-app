@@ -30,7 +30,6 @@ export const deleteListing = async (req, res, next) => {
 };
 
 export const updateListing = async (req, res, next) => {
- 
   const listing = await Listing.findById(req.params.id);
   if (!listing) {
     return next(errorHandler(404, "Listing not found!"));
@@ -52,7 +51,6 @@ export const updateListing = async (req, res, next) => {
 };
 
 export const getListing = async (req, res, next) => {
- 
   try {
     const listing = await Listing.findById(req.params.id);
     if (!listing) {
@@ -65,7 +63,7 @@ export const getListing = async (req, res, next) => {
 };
 
 export const getListings = async (req, res, next) => {
-  console.log(req.query)
+  console.log(req.query);
   try {
     const limit = parseInt(req.query.limit) || 9;
     const startIndex = parseInt(req.query.startIndex) || 0;
@@ -109,7 +107,7 @@ export const getListings = async (req, res, next) => {
       .sort({ [sort]: order })
       .limit(limit)
       .skip(startIndex);
-
+    console.log("nithin");
     return res.status(200).json(listings);
   } catch (error) {
     next(error);

@@ -35,7 +35,7 @@ const SignIn = () => {
       });
       console.log(res);
       const data = await res.json();
-console.log(data)
+      console.log(data);
       if (data.success === false) {
         dispatch(signInFailutre(data.message));
         return;
@@ -48,8 +48,11 @@ console.log(data)
   };
 
   return (
-    <div className="p-3 max-w-lg mx-auto">
-      <h1 className="text-3xl text-center font-semibold my-7">Sigh In</h1>
+    <div className="p-3 max-w-lg mx-auto mt-20">
+      <h1 className="text-3xl text-center my-7">
+        <span className="font-bold  text-lime-700">Sigh</span>{" "}
+        <span className="text-lime-500 font-bold ">In </span>{" "}
+      </h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           onChange={handleChange}
