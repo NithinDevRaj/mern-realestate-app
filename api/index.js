@@ -41,6 +41,3 @@ app.get("*", (req, res) => {
 
 //configuring error middleware
 app.use(error);
-
-
-

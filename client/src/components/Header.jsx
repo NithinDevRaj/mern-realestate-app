@@ -21,13 +21,14 @@ const Header = () => {
           </Link>
 
           <Link to="/properties">
-            <li className="hidden sm:inline text-lime-700 hover:underline">
+            <li className=" text-lime-700 hover:underline">
               My<span className="text-lime-500">property</span>
             </li>
           </Link>
           <Link to={"/search"}>
             <li>
-              <FaSearch className="inline-block" /> search
+              <FaSearch className="inline-block" />
+              <span className="hidden sm:inline">search</span>
             </li>
           </Link>
           <Link to="/profile">
